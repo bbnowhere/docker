@@ -21,3 +21,22 @@ EXPOSE 80
 
 # Start Apache
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
+
+---end of docker file --
+
+
+Create the Docker Image and Container
+
+Now we create the Docker Image.
+
+docker build -t image_apache .
+
+
+Then we create the Docker Container.
+
+Notice that we need to indicate the path of our local folder that will be served as the root of the Apache Web Server, which in this example is /path_to/my_website. Replace it with the location of your site's root folder.
+
+docker run -tid -p 4000:80 --name=container_apache -v /path_to/my_website:/var/www/html image_apache
+
+
+After the Docker Container is created, we can go to the url http://localhost:4000 to open the local website.
