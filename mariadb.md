@@ -26,5 +26,5 @@ mariadbtest is the name we want to assign the container. If we don't specify a n
 ### docker run --name mariadbtest -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:10.2
 Optionally, after the image name, we can specify some options for mysqld. For example:
 
-# docker run --name mariadbtest -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:10.3 --log-bin --binlog-format=MIXED
+### docker run --name mariadbtest -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:10.3 --log-bin --binlog-format=MIXED
 Docker will respond with the container's id. But, just to be sure that the container has been created and is running, we can get a list of running containers in this way:
