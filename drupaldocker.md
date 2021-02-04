@@ -16,6 +16,6 @@ docker images
 
 ## Create the container based on the image
 
-docker run -tid -p 8083:80 --name=drupal8websites -v /home/(name of your web directory):/var/www/html drupalserver
+docker run -tid -p 8083:80 --name=drupal8websites --link mariadbdockerimage:mysql -v /home/(name of your web directory):/var/www/html drupalserver
 
 DONE
